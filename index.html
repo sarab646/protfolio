@@ -1,121 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Sarab Sohail — Portfolio</title>
-
-  <!-- Tailwind CSS CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportify - All Sports & Fitness Gear</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#6366f1', // Indigo
-            accent: '#a855f7',  // Purple accent
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
-<body class="bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 transition-all duration-500">
+<body class="bg-gray-900 text-white font-sans">
 
   <!-- Navbar -->
-  <header class="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-sm z-50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
-      <div class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Sarab Sohail</div>
-      <nav class="hidden md:flex space-x-6 font-medium">
-        <a href="#about" class="hover:text-primary">About</a>
-        <a href="#skills" class="hover:text-primary">Skills</a>
-        <a href="#projects" class="hover:text-primary">Projects</a>
-        <a href="#contact" class="hover:text-primary">Contact</a>
-        <button id="themeToggle" class="ml-3 px-3 py-1 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800">vdv</button>
-      </nav>
-      <button id="mobileMenuBtn" class="md:hidden p-2 border rounded-lg">☰</button>
+  <header class="flex justify-between items-center px-8 py-4 bg-black/70 sticky top-0 z-50 transition duration-300">
+    <div class="text-xl font-bold">SPORTIFY</div>
+    <nav id="nav-menu" class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-cyan-400">Home</a>
+      <a href="gear.html" class="hover:text-cyan-400">Gear</a>
+      <a href="brands.html" class="hover:text-cyan-400">Brands</a>
+      <a href="about.html" class="hover:text-cyan-400">About</a>
+      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+    </nav>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-white material-icons">menu</button>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 flex flex-col text-center space-y-2 py-4 font-medium">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button id="themeToggleMobile" class="p-2 mx-auto border rounded-lg w-3/4">Toggle Theme</button>
+    <div class="hidden md:flex items-center space-x-4">
+      <input type="text" placeholder="Search products..." class="bg-gray-800 px-3 py-1 rounded-md text-sm placeholder-gray-400">
+      <span class="material-icons cursor-pointer">account_circle</span>
+      <span class="material-icons cursor-pointer">shopping_cart</span>
     </div>
   </header>
 
-  <!-- Hero / About -->
-  <section id="about" class="pt-28 pb-16 text-center fade-in">
-    <img src="https://picsum.photos/250" class="mx-auto w-44 h-44 rounded-full border-4 border-primary shadow-lg mb-6" alt="Profile Photo">
-    <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-      Hi, I'm  Sarab Sohail
-    </h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-      A passionate <strong>Computer Science student</strong> who loves crafting beautiful and interactive web applications.
-      I enjoy turning complex ideas into elegant, responsive, and user-friendly designs.
-    </p>
-    <div class="mt-6 flex justify-center gap-4">
-      <a href="#projects" class="px-6 py-2 bg-primary text-white rounded-lg hover:scale-105 transition-transform">View Projects</a>
-      <a href="#contact" class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition">Contact Me</a>
+  <!-- Hero Section -->
+  <section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b');">
+    <div class="bg-black/50 w-full h-full absolute inset-0"></div>
+    <div class="relative z-10 px-8 max-w-2xl">
+      <p class="text-sm uppercase tracking-widest mb-2">Welcome to Sportify</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Your Online Store for<br> <span class="text-cyan-400">All Sports & Fitness Gear</span>
+      </h1>
+      <a href="#" class="inline-block mt-4 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition">Explore Now</a>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-16 bg-white dark:bg-gray-900 fade-in">
-    <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
-    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">HTML5 & CSS3</div>
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">Tailwind CSS</div>
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">JavaScript (ES6)</div>
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">Responsive Design</div>
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">Git & GitHub</div>
-      <div class="p-5 border rounded-xl hover:shadow-lg hover:-translate-y-1 transition">UI / UX Principles</div>
+  <!-- Featured Categories -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-12 bg-gray-950">
+    <!-- Football Gear -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Football</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
+      </div>
     </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 fade-in">
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-        <h3 class="text-xl font-semibold mb-2">car rental system</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-3">Displays live weather for any city using OpenWeather API.</p>
-        <a href="task.html" class="text-primary hover:underline">View Project →</a>
+    <!-- Running Gear -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1486218119243-13883505764c" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Running</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
       </div>
-      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-        <h3 class="text-xl font-semibold mb-2">💻 Portfolio Website</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-3">Personal portfolio built with Tailwind CSS and JavaScript.</p>
-        <a href="#" class="text-primary hover:underline">View Project →</a>
-      </div>
-      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-        <h3 class="text-xl font-semibold mb-2">🧮 Calculator App</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-3">A responsive calculator with smooth UI and keyboard input.</p>
-        <a href="#" class="text-primary hover:underline">View Project →</a>
+    </div>
+
+    <!-- Gym Equipment -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Gym Equipment</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 fade-in">
-    <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
-    <form class="max-w-2xl mx-auto grid gap-4">
-      <input type="text" placeholder="Your Name" class="p-3 border rounded-lg" required>
-      <input type="email" placeholder="Your Email" class="p-3 border rounded-lg" required>
-      <textarea placeholder="Message" class="p-3 border rounded-lg h-32"></textarea>
-      <button type="submit" class="bg-primary text-white py-2 rounded-lg hover:scale-105 transition-transform">Send Message</button>
+  
+  <section class="bg-gray-800 px-8 py-12 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Stay Updated with Our Latest Gear</h2>
+    <p class="mb-6 text-gray-300">Subscribe to our newsletter and never miss an update on the latest deals and product launches.</p>
+    <form id="newsletter-form" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <input type="email" id="email-input" placeholder="Enter your email" class="px-4 py-2 rounded-md text-black w-full sm:w-auto">
+      <button type="submit" class="px-6 py-2 bg-cyan-400 text-black font-semibold rounded-md hover:bg-cyan-300 transition">Subscribe</button>
     </form>
   </section>
 
-  <footer class="py-8 text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
-    © 2025  Sarab Sohail — Designed with ❤️ using Tailwind CSS
+
+  <footer class="bg-black/80 px-8 py-6 text-center text-gray-400">
+    <p>&copy; 2025 Sportify. All rights reserved.</p>
   </footer>
 
-  <script src="home.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

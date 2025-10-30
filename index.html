@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Sarab Sohail — Portfolio</title>
+  <title>Sarab Sohail — Portfolio</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -37,7 +39,7 @@
         <a href="#skills" class="hover:text-primary">Skills</a>
         <a href="#projects" class="hover:text-primary">Projects</a>
         <a href="#contact" class="hover:text-primary">Contact</a>
-        <button id="themeToggle" class="ml-3 px-3 py-1 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800">vdv</button>
+        <button id="themeToggle" class="ml-3 px-3 py-1 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800">Toggle Theme</button>
       </nav>
       <button id="mobileMenuBtn" class="md:hidden p-2 border rounded-lg">☰</button>
     </div>
@@ -54,7 +56,7 @@
   <section id="about" class="pt-28 pb-16 text-center fade-in">
     <img src="https://picsum.photos/250" class="mx-auto w-44 h-44 rounded-full border-4 border-primary shadow-lg mb-6" alt="Profile Photo">
     <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-      Hi, I'm  Sarab Sohail
+      Hi, I'm Sarab Sohail
     </h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
       A passionate <strong>Computer Science student</strong> who loves crafting beautiful and interactive web applications.
@@ -84,7 +86,7 @@
     <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
       <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-        <h3 class="text-xl font-semibold mb-2">car rental system</h3>
+        <h3 class="text-xl font-semibold mb-2">Car Rental System</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-3">Displays live weather for any city using OpenWeather API.</p>
         <a href="task.html" class="text-primary hover:underline">View Project →</a>
       </div>
@@ -113,7 +115,7 @@
   </section>
 
   <footer class="py-8 text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
-    © 2025  Sarab Sohail — Designed with ❤️ using Tailwind CSS
+    © 2025 Sarab Sohail — Designed with ❤ using Tailwind CSS
   </footer>
 
   <script src="home.js"></script>

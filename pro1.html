@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportify - All Sports & Fitness Gear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-4 bg-black/70 sticky top-0 z-50 transition duration-300">
+    <div class="text-xl font-bold">SPORTIFY</div>
+    <nav id="nav-menu" class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-cyan-400">Home</a>
+      <a href="gear.html" class="hover:text-cyan-400">Gear</a>
+      <a href="brands.html" class="hover:text-cyan-400">Brands</a>
+      <a href="about.html" class="hover:text-cyan-400">About</a>
+      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+    </nav>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-white material-icons">menu</button>
+    </div>
+    <div class="hidden md:flex items-center space-x-4">
+      <input type="text" placeholder="Search products..." class="bg-gray-800 px-3 py-1 rounded-md text-sm placeholder-gray-400">
+      <span class="material-icons cursor-pointer">account_circle</span>
+      <span class="material-icons cursor-pointer">shopping_cart</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b');">
+    <div class="bg-black/50 w-full h-full absolute inset-0"></div>
+    <div class="relative z-10 px-8 max-w-2xl">
+      <p class="text-sm uppercase tracking-widest mb-2">Welcome to Sportify</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Your Online Store for<br> <span class="text-cyan-400">All Sports & Fitness Gear</span>
+      </h1>
+      <a href="#" class="inline-block mt-4 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-12 bg-gray-950">
+    <!-- Football Gear -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Football</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Running Gear -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1486218119243-13883505764c" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Running</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Gym Equipment -->
+    <div class="relative group cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" class="w-full h-64 object-cover group-hover:opacity-80 transition" />
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-6">
+        <h2 class="text-2xl font-semibold mb-2">Gym Equipment</h2>
+        <a href="#" class="px-4 py-1 border border-white text-white hover:bg-white hover:text-black transition">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="bg-gray-800 px-8 py-12 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Stay Updated with Our Latest Gear</h2>
+    <p class="mb-6 text-gray-300">Subscribe to our newsletter and never miss an update on the latest deals and product launches.</p>
+    <form id="newsletter-form" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <input type="email" id="email-input" placeholder="Enter your email" class="px-4 py-2 rounded-md text-black w-full sm:w-auto">
+      <button type="submit" class="px-6 py-2 bg-cyan-400 text-black font-semibold rounded-md hover:bg-cyan-300 transition">Subscribe</button>
+    </form>
+  </section>
+
+
+  <footer class="bg-black/80 px-8 py-6 text-center text-gray-400">
+    <p>&copy; 2025 Sportify. All rights reserved.</p>
+  </footer>
+
+  <script src="pro1.js"></script>
+</body>
+</html>

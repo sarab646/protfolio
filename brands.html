@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify Brands</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-4 bg-black/70">
+    <div class="text-xl font-bold">SPORTIFY</div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-cyan-400">Home</a>
+      <a href="gear.html" class="hover:text-cyan-400">Gear</a>
+      <a href="brands.html" class="hover:text-cyan-400 text-cyan-400">Brands</a>
+      <a href="about.html" class="hover:text-cyan-400">About</a>
+      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <input type="text" placeholder="Search brands..." class="bg-gray-800 px-3 py-1 rounded-md text-sm placeholder-gray-400">
+      <span class="material-icons cursor-pointer">account_circle</span>
+      <span class="material-icons cursor-pointer">shopping_cart</span>
+    </div>
+  </header>
+
+  <!-- Title -->
+  <section class="text-center py-12 bg-gray-800">
+    <h1 class="text-4xl font-bold mb-2">Top Sports Brands</h1>
+    <p class="text-gray-300">Browse and shop by your favorite sportswear and equipment brands</p>
+  </section>
+
+  <!-- Brands Grid -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8 py-12">
+    <!-- Brand Card -->
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition p-6 text-center">
+      <img src="https://1000logos.net/wp-content/uploads/2017/03/Nike-Logo.png" alt="Nike" class="h-20 mx-auto mb-4 object-contain">
+      <h2 class="text-xl font-semibold">Nike</h2>
+      <p class="text-sm text-gray-400">Iconic performance wear for athletes and lifestyle enthusiasts.</p>
+      <a href="#" class="inline-block mt-4 text-cyan-400 hover:underline">Shop Nike</a>
+    </div>
+
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition p-6 text-center">
+      <img src="https://1000logos.net/wp-content/uploads/2016/10/Adidas-Logo.png" alt="Adidas" class="h-20 mx-auto mb-4 object-contain">
+      <h2 class="text-xl font-semibold">Adidas</h2>
+      <p class="text-sm text-gray-400">Innovative gear that fuels professional and amateur athletes.</p>
+      <a href="#" class="inline-block mt-4 text-cyan-400 hover:underline">Shop Adidas</a>
+    </div>
+
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition p-6 text-center">
+      <img src="https://images.unsplash.com/photo-1576020111958-bff2cf17226d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVuZGVyJTIwYXJtb3VyJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="Under Armour" class="h-20 mx-auto mb-4 object-contain">
+      <h2 class="text-xl font-semibold">Under Armour</h2>
+      <p class="text-sm text-gray-400">Gear engineered for peak performance in any sport.</p>
+      <a href="#" class="inline-block mt-4 text-cyan-400 hover:underline">Shop UA</a>
+    </div>
+
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition p-6 text-center">
+      <img src="https://images.unsplash.com/photo-1633523154731-d131470565d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHVtYXxlbnwwfHwwfHx8MA%3D%3D" alt="Puma" class="h-20 mx-auto mb-4 object-contain">
+      <h2 class="text-xl font-semibold">Puma</h2>
+      <p class="text-sm text-gray-400">Bold, fast, and fashion-forward sportswear and gear.</p>
+      <a href="#" class="inline-block mt-4 text-cyan-400 hover:underline">Shop Puma</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/80 px-8 py-6 text-center text-gray-400">
+    <p>&copy; 2025 Sportify. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

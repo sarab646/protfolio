@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookstore Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative h-screen flex items-center justify-center text-gray-800">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Login Box -->
+  <div class="relative z-10 w-full max-w-md p-8 bg-white bg-opacity-30 backdrop-blur-md rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-center text-white mb-6">Bookstore Login</h2>
+    <form id="login-form">
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-white">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required
+               class="w-full px-4 py-2 mt-1 border rounded-lg bg-white bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+      <div class="mb-6 relative">
+        <label for="password" class="block text-sm font-medium text-white">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" required
+               class="w-full px-4 py-2 mt-1 border rounded-lg bg-white bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <button type="button" id="togglePassword" class="absolute right-3 top-9 text-sm text-indigo-800 hover:underline bg-white bg-opacity-40 px-2 rounded">Show</button>
+      </div>
+      <button type="submit"
+              class="w-full py-2 font-semibold text-white rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition">
+        Login
+      </button>
+      <p class="mt-4 text-sm text-center text-white">
+        Don't have an account?
+        <a href="reg.html" class="text-indigo-200 hover:underline">Sign Up</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const togglePasswordBtn = document.getElementById('togglePassword');
+
+    // Form submission handler
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (email === '' || password === '') {
+        alert('Please fill in both email and password.');
+        return;
+      }
+
+      // Simulate successful login
+      alert(`Welcome back, ${email}!`);
+      
+      // Reset form fields
+      form.reset();
+    });
+
+    // Toggle password visibility
+    togglePasswordBtn.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.textContent = type === 'password' ? 'Show' : 'Hide';
+    });
+  </script>
+</body>
+</html>

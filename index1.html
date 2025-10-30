@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Marketplace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex flex-wrap items-center justify-between px-6 py-4 bg-black text-white relative">
+    <div class="text-2xl font-bold bg-teal-600 w-10 h-10 flex items-center justify-center rounded hover:bg-teal-700 transition">
+      Z
+    </div>
+    <button id="menuBtn" class="text-white md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+    <div id="navLinks" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-black md:bg-transparent px-6 py-4 md:p-0 z-50">
+      <a href="recently added.html" class="block py-2 hover:underline hover:text-teal-400 transition">Recently Added</a>
+      <a href="contact.html" class="block py-2 hover:underline hover:text-teal-400 transition">Contact us</a>
+      <a href="login.html" class="block py-2 hover:underline hover:text-teal-400 transition">Login</a>
+      <a href="reg.html" class="block py-2 hover:underline hover:text-teal-400 transition">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="relative h-[60vh] bg-cover bg-center text-white" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1950&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 flex flex-col justify-center items-start h-full px-4 md:px-10">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-4 hover:text-teal-400 transition">Pakistan's Largest Online Books Marketplace!</h1>
+      <div class="flex w-full max-w-2xl mt-4 flex-wrap sm:flex-nowrap gap-2">
+        <input type="text" id="searchInput" placeholder="Search Here" class="flex-grow p-2 rounded bg-white text-black focus:outline-none">
+        <button id="searchBtn" class="bg-teal-600 hover:bg-teal-700 px-4 text-white font-bold transition">GO</button>
+        <a href="#" class="text-sm underline text-white hover:text-teal-300 transition self-center">Advanced Search</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-col lg:flex-row">
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-64 bg-teal-800 text-white p-4">
+      <h2 class="text-2xl font-semibold mb-4">Categories</h2>
+      <button class="lg:hidden mb-2 underline text-sm" id="toggleCategories">Toggle Categories</button>
+      <ul class="space-y-1 text-sm hidden lg:block" id="categoryList">
+        <li class="font-bold mb-2 hover:underline cursor-pointer">Recently Added</li>
+        <li class="hover:underline cursor-pointer">All Books</li>
+        <li class="hover:underline cursor-pointer">*Bargain Children’s Books</li>
+        <li class="hover:underline cursor-pointer">*Educational Toys</li>
+        <li class="hover:underline cursor-pointer">*Vintage Comics</li>
+        <li class="hover:underline cursor-pointer">*Collectors Item</li>
+        <li class="hover:underline cursor-pointer">*Magazines</li>
+        <li class="hover:underline cursor-pointer">*New Releases</li>
+        <li class="hover:underline cursor-pointer">Animals & Nature</li>
+        <li class="hover:underline cursor-pointer">Architecture</li>
+        <li class="hover:underline cursor-pointer">Arts & Crafts</li>
+        <li class="hover:underline cursor-pointer">Biography/Autobiography/Memoirs</li>
+        <li class="hover:underline cursor-pointer">Business & Economics</li>
+        <li class="hover:underline cursor-pointer">Children/Young Adults</li>
+        <li class="hover:underline cursor-pointer">Classics</li>
+        <li class="hover:underline cursor-pointer">Comics/Graphic Novels</li>
+        <li class="hover:underline cursor-pointer">Cooking</li>
+        <li class="hover:underline cursor-pointer">Economics</li>
+        <li class="hover:underline cursor-pointer">English Literature</li>
+        <li class="hover:underline cursor-pointer">Fashion</li>
+        <li class="hover:underline cursor-pointer">Fiction</li>
+        <li class="hover:underline cursor-pointer">Film</li>
+        <li class="hover:underline cursor-pointer">Finance & Accounting</li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 p-6">
+      <h2 class="text-xl font-semibold mb-4">Featured Categories</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white shadow p-2 hover:shadow-lg transition h-72">
+          <img src="https://images.unsplash.com/photo-1610558495616-9ce40f904dde?q=80&w=1887&auto=format&fit=crop" class="w-full h-48 object-cover hover:scale-105 transition" alt="Classics">
+          <p class="text-center mt-2 font-semibold hover:text-teal-600 transition">Classics</p>
+        </div>
+        <div class="bg-white shadow p-2 hover:shadow-lg transition h-72">
+          <img src="https://images.unsplash.com/photo-1512331455279-c8ae8178f586?w=500&auto=format&fit=crop&q=60" class="w-full h-48 object-cover hover:scale-105 transition" alt="Children">
+          <p class="text-center mt-2 font-semibold hover:text-teal-600 transition">Children/Young Adults</p>
+        </div>
+        <div class="bg-white shadow p-2 hover:shadow-lg transition h-72">
+          <img src="https://images.unsplash.com/photo-1527530527470-c55f85665e89?w=500&auto=format&fit=crop&q=60" class="w-full h-48 object-cover hover:scale-105 transition" alt="Fiction">
+          <p class="text-center mt-2 font-semibold hover:text-teal-600 transition">Fiction</p>
+        </div>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-10 mb-4">Recently Added</h2>
+      <div class="flex items-center space-x-4 overflow-x-auto">
+        <button class="text-2xl hover:text-teal-600 transition">&#8592;</button>
+        <img src="https://images.unsplash.com/photo-1569360457068-0e24f0d88117?w=500&auto=format&fit=crop&q=60" class="w-32 h-48 object-cover hover:scale-105 transition" alt="Book 1">
+        <img src="https://images.unsplash.com/photo-1531113191064-d850e467e935?w=500&auto=format&fit=crop&q=60" class="w-32 h-48 object-cover hover:scale-105 transition" alt="Book 2">
+        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&auto=format&fit=crop&q=60" class="w-32 h-48 object-cover hover:scale-105 transition" alt="Book 3">
+        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500&auto=format&fit=crop&q=60" class="w-32 h-48 object-cover hover:scale-105 transition" alt="Book 4">
+        <button class="text-2xl hover:text-teal-600 transition">&#8594;</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
